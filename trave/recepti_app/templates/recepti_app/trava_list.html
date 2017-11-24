@@ -1,0 +1,17 @@
+{% extends "recepti_app/recepti_base.html" %}
+
+{% block content %}
+
+  <h3>Lista trava:</h3>
+
+
+  <ul>
+    {% for object in problem %}
+    <li>
+      <a href="{% url 'recepti_app:recept' pk=object.pk %}">{{ object }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}
